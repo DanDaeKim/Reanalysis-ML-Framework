@@ -74,5 +74,5 @@ plt.ylabel('R-squared')
 plt.title('Model Comparison - R2')
 plt.show()
 
-# Further interpretation of the results will depend on the specific dataset and models used
+# Further interpretation of the results will depend on the specific dataset and models
 
