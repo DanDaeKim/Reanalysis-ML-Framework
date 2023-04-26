@@ -10,6 +10,8 @@ from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
 
+from visualization import plot_mse, plot_r2
+
 # Load the dataset
 data = pd.read_csv('path/to/your/dataset.csv')
 
@@ -61,6 +63,9 @@ print("Gradient Boosting - MSE: {}, R2: {}".format(gb_mse, gb_r2))
 models = ['Decision Tree', 'Random Forest', 'Gradient Boosting']
 mse_values = [dt_mse, rf_mse, gb_mse]
 r2_values = [dt_r2, rf_r2, gb_r2]
+
+plot_mse(models, mse_values)
+plot_r2(models, r2_values)
 
 plt.bar(models, mse_values)
 plt.xlabel('Models')
